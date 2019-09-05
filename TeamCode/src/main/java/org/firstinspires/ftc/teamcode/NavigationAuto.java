@@ -11,7 +11,7 @@ public class NavigationAuto extends LinearOpMode {
     private DcMotor right_drive;
 
     /**
-     * This function is executed when this Op Mode is selected from the Driver Station.
+     * This function is executed when this Op Mode is selected from the Driver Statio.
      */
     @Override
     public void runOpMode() {
@@ -26,7 +26,7 @@ public class NavigationAuto extends LinearOpMode {
             sleep(1000);
             left_drive.setPower(0);
             right_drive.setPower(0);
-            // Put run blocks here.
+            // Put run blocks he.re.
             while (opModeIsActive()) {
                 // Put loop blocks here.
                 telemetry.update();
