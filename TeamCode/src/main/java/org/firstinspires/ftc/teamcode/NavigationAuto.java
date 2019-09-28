@@ -22,7 +22,13 @@ public class NavigationAuto extends LinearOpMode {
         waitForStart();
         if (opModeIsActive()) {
             left_drive.setPower(1);
+            right_drive.setPower(-1);
+            sleep(1000);
+            left_drive.setPower(-1);
             right_drive.setPower(1);
+            sleep(1000);
+            left_drive.setPower(-1);
+            right_drive.setPower(-1);
             sleep(1000);
             left_drive.setPower(0);
             right_drive.setPower(0);
