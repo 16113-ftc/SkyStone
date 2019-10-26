@@ -29,8 +29,8 @@
 
 package org.firstinspires.ftc.teamcode;
 
-        import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 
 import org.firstinspires.ftc.robotcore.external.ClassFactory;
 import org.firstinspires.ftc.robotcore.external.navigation.VuforiaLocalizer;
@@ -50,7 +50,7 @@ import java.util.List;
  * IMPORTANT: In order to use this OpMode, you need to obtain your own Vuforia license key as
  * is explained below.
  */
-@TeleOp(name = "Concept: TensorFlow Object Detection", group = "Concept")
+@Autonomous(name = "TensorFlow Object Detection", group = "Concept")
 //@Disabled
 public class TensorFlowBuildingBlockDetection extends LinearOpMode {
     private static final String TFOD_MODEL_ASSET = "Skystone.tflite";
@@ -70,7 +70,7 @@ public class TensorFlowBuildingBlockDetection extends LinearOpMode {
      * and paste it in to your code on the next line, between the double quotes.
      */
     private static final String VUFORIA_KEY =
-            " -- YOUR NEW VUFORIA KEY GOES HERE  --- ";
+            "AXuJ5Oz/////AAABmQJXCiv7P0lpn2i8TzOD7GZTbO3W8SEVstdC6PAqVUBTkzb3D6JUCyRJmgTJ0bxiVXBiMeb1dBCb4WQp0ZOmxQiWYeoyrRq05f0EvoP74axLnzPt2os0X2YQQJXd2A/H37vvO/620kEFfttERkjeqBco56diQ2oyxGraywCANpprRuHfHHXI91sz85w2mGD4C3SHZ53vy86/1ze5Z4X1veFuIZOQHg02sgwPEjn9OeHkNVFVo9U7jkzVwchcXOTpIGcyMw55W2GR6kPAq55EjaIFb2h+/A2i2n8DYC9rTaMHWC3sLo7BSMmNvm4nFfEWiQh/jAGvFLvGCpdK7IIjezhMvAxdqADqMjUklSEPrrxU";
 
     /**
      * {@link #vuforia} is the variable we will use to store our instance of the Vuforia
