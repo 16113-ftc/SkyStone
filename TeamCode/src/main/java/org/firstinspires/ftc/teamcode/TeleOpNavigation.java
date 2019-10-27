@@ -18,12 +18,13 @@ public class TeleOpNavigation extends LinearOpMode {
      */
     @Override
     public void runOpMode() {
-        float speed;
-        double turnspeed;
+        float speed= 0.0f;
+        double turnspeed = 0.0f;
 
         leftFront = hardwareMap.dcMotor.get("leftFront");
         rightFront = hardwareMap.dcMotor.get("rightFront");
-
+        leftBack = hardwareMap.dcMotor.get("leftBack");
+        rightBack = hardwareMap.dcMotor.get("rightBack");
         // Put initialization blocks here.
         waitForStart();
         if (opModeIsActive()) {
@@ -33,13 +34,13 @@ public class TeleOpNavigation extends LinearOpMode {
                     speed = gamepad1.left_stick_y;
                     leftFront.setPower(speed);
                     leftBack.setPower(speed);
-                    rightFront.setPower(-speed);
-                    rightBack.setPower(-speed);
+                    rightFront.setPower(speed);
+                    rightBack.setPower(speed);
                     turnspeed = -gamepad1.left_stick_x;
                     leftFront.setPower(turnspeed / 1.5);
                     leftBack.setPower(turnspeed / 1.5);
-                    rightFront.setPower(turnspeed / 1.5);
-                    rightBack.setPower(turnspeed / 1.5);
+                    rightFront.setPower(-turnspeed / 1.5);
+                    rightBack.setPower(-turnspeed / 1.5);
                 }
                 telemetry.update();
             }
