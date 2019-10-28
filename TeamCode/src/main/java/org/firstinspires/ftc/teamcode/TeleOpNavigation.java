@@ -30,18 +30,45 @@ public class TeleOpNavigation extends LinearOpMode {
         if (opModeIsActive()) {
             // Put run blocks here.
             while (opModeIsActive()) {
-                while (!gamepad1.b) {
+
                     speed = gamepad1.left_stick_y;
                     leftFront.setPower(speed);
                     leftBack.setPower(speed);
-                    rightFront.setPower(speed);
-                    rightBack.setPower(speed);
-                    turnspeed = -gamepad1.left_stick_x;
-                    leftFront.setPower(turnspeed / 1.5);
-                    leftBack.setPower(turnspeed / 1.5);
-                    rightFront.setPower(-turnspeed / 1.5);
-                    rightBack.setPower(-turnspeed / 1.5);
+                    rightFront.setPower(-speed);
+                    rightBack.setPower(-speed);
+
+                    turnspeed = gamepad1.left_stick_x;
+                    leftFront.setPower(turnspeed / 2);
+                    leftBack.setPower(turnspeed / 2);
+                    rightFront.setPower(turnspeed / 2);
+                    rightBack.setPower(turnspeed / 2);
+
+                while (gamepad1.a) {
+                    leftFront.setPower(0.5);
+                    sleep(1000);
+                    leftFront.setPower(0);
                 }
+
+                while (gamepad1.b) {
+                    rightFront.setPower(0.5);
+                    sleep(1000);
+                    rightFront.setPower(0);
+                }
+
+                while (gamepad1.x) {
+                    rightBack.setPower(0.5);
+                    sleep(1000);
+                    rightBack.setPower(0);
+                }
+
+
+
+                while (gamepad1.y) {
+                    leftBack.setPower(0.5);
+                    sleep(1000);
+                    leftBack.setPower(0);
+                }
+
                 telemetry.update();
             }
         }
