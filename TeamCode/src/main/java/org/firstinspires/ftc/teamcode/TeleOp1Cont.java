@@ -59,6 +59,22 @@ public class TeleOp1Cont extends LinearOpMode {
 
                 }
 
+                while (gamepad1.dpad_left) {
+                    leftFront.setPower(-0.75);
+                    leftBack.setPower(0.75);
+                    rightFront.setPower(-0.75);
+                    rightBack.setPower(0.75);
+
+                }
+
+                while (gamepad1.dpad_right) {
+                    leftFront.setPower(0.75);
+                    leftBack.setPower(-0.75);
+                    rightFront.setPower(0.75);
+                    rightBack.setPower(-0.75);
+
+                }
+
 
                 while (gamepad1.dpad_down) {
                     arm.setPower(-0.75);
