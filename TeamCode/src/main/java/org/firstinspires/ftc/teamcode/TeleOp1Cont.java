@@ -5,8 +5,8 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.Servo;
 
-@TeleOp(name = "TeleOpNavigation", group = "")
-public class TeleOpNavigation extends LinearOpMode {
+@TeleOp(name = "TeleOp1Cont", group = "")
+public class TeleOp1Cont extends LinearOpMode {
 
     private DcMotor leftFront;
     private DcMotor rightFront;
@@ -41,26 +41,26 @@ public class TeleOpNavigation extends LinearOpMode {
             // Put run blocks here.
             while (opModeIsActive()) {
 
-                    speed = gamepad1.left_stick_y;
-                    leftFront.setPower(speed);
-                    leftBack.setPower(speed);
-                    rightFront.setPower(-speed);
-                    rightBack.setPower(-speed);
+                speed = gamepad1.left_stick_y;
+                leftFront.setPower(speed);
+                leftBack.setPower(speed);
+                rightFront.setPower(-speed);
+                rightBack.setPower(-speed);
 
-                    turnspeed = gamepad1.left_stick_x;
-                    leftFront.setPower(-turnspeed);
-                    leftBack.setPower(-turnspeed);
-                    rightFront.setPower(-turnspeed);
-                    rightBack.setPower(-turnspeed);
+                turnspeed = gamepad1.left_stick_x;
+                leftFront.setPower(-turnspeed);
+                leftBack.setPower(-turnspeed);
+                rightFront.setPower(-turnspeed);
+                rightBack.setPower(-turnspeed);
 
 
-                while (gamepad2.dpad_up) {
+                while (gamepad1.dpad_up) {
                     arm.setPower(0.75);
 
                 }
 
 
-                while (gamepad2.dpad_down) {
+                while (gamepad1.dpad_down) {
                     arm.setPower(-0.75);
 
                 }
@@ -73,18 +73,18 @@ public class TeleOpNavigation extends LinearOpMode {
                     leftFront.setPower(0);
                 }
 
-                while (gamepad2.b) {
+                while (gamepad1.b) {
                     arm.setPower(0);
                 }
 
                 while (gamepad1.right_bumper) {
-                    Claw.setPosition(90);
+                    Claw.setPosition(-30);
                 }
 
 
 
                 while (gamepad1.left_bumper) {
-                    Claw.setPosition(0);
+                    Claw.setPosition(60);
                 }
 
                 telemetry.update();

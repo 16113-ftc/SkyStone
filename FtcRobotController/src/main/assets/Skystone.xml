@@ -5,5 +5,13 @@
     <ImageTarget name="RedPerimeter" size="254.000000 181.783096" />
     <ImageTarget name="FrontPerimeter" size="254.000000 158.794403" />
     <ImageTarget name="BackPerimeter" size="254.000000 199.508209" />
+    <ImageTarget name="RedFoundation" size="" />
+    <ImageTarget name="BlueFoundation" size="" />
+    <ImageTarget name="Stone" size="" />
+    <ImageTarget name="Skystone" size="" />
+    <ImageTarget name="BlueBuildingSite" size="" />
+    <ImageTarget name="RedBuildingSite" size="" />
+    <ImageTarget name="BlueSkybridgeLine" size="" />
+    <ImageTarget name="RedSkybridgeLine" size="" />
   </Tracking>
 </QCARConfig>
