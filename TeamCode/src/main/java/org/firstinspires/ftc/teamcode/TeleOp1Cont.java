@@ -48,7 +48,7 @@ public class TeleOp1Cont extends LinearOpMode {
                 rightBack.setPower(-speed);
 
                 turnspeed = gamepad1.left_stick_x;
-                leftFront.setPower(-turnspeed);
+                //tpower(double)(-turnspeed);
                 leftBack.setPower(-turnspeed);
                 rightFront.setPower(-turnspeed);
                 rightBack.setPower(-turnspeed);
@@ -94,7 +94,7 @@ public class TeleOp1Cont extends LinearOpMode {
                 }
 
                 while (gamepad1.right_bumper) {
-                    Claw.setPosition(-30);
+                    //Claw.setPosition(double);position+(-30);
                 }
 
 
